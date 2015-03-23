@@ -1,3 +1,8 @@
+env:
+  global:
+    deploygate_api_key: bIV+OzP5F248wMKVG8Bm6CGEW+ZVC+Q8TtWXPjx2fgci1JV/ay9ihY1mD/2Lj0AG72IR3AK0ZlKaXOyj73KUTFX7dd9jmKL3Ei6h4Y3o1KhkqFaxEmlImoIkPiOLOWuooqdjmEv5SlOvduFyV5/8A/rZ+A93FtKJJzunD5geX/Y=
+
+
 language: android
 android:
   components:
