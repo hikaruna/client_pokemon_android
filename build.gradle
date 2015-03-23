@@ -6,9 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.deploygate:gradle:+'
     }
 }
 
@@ -16,4 +14,19 @@ allprojects {
     repositories {
         jcenter()
     }
+}
+
+apply plugin: 'deploygate'
+
+deploygate {
+  userName = "hikaruna"
+  token = System.env['deploygate_api_key']
+
+  apks {
+    development {
+      sourceFile = file("./app/build/outputs/apk/app-development-debug.apk")
+      message = "開発環境の最新ビルドです"
+      releaseNote = "更新内容はdevelブランチのdiffとコミットメッセージを参照して下さい https://github.com/hikaruna/pokemon_client_android"
+    }
+  }
 }
