@@ -30,3 +30,5 @@ deploygate {
     }
   }
 }
+
+uploadDeployGateDebug.dependsOn assembleDebug
