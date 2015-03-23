@@ -11,4 +11,5 @@ android:
   - sysimg-21
   - extra-android-support
 script:
+- ./gradlew assembleDebug
 - ./gradlew uploadDeployGateDebug
